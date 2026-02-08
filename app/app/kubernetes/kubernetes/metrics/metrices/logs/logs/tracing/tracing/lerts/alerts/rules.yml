@@ -1,0 +1,5 @@
+groups:
+- name: app-alerts
+  rules:
+  - alert: HighLatency
+    expr: request_latency_seconds > 2
