@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: obs-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: obs-app
+  template:
+    metadata:
+      labels:
+        app: obs-app
+    spec:
+      containers:
+      - name: app
+        image: obs-app:latest
+        ports:
+        - containerPort: 8080
